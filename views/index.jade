@@ -2,23 +2,26 @@ extends layout
 
 block content
   script(language="JavaScript")
+  
+  dive(data-role="page",data-theme="b", id="home")
+
+    dive(data-role="header")
+      h1= title
+      p Welcome to #{title}
+
+    dive(data-role="content")
+      #target
+
+      iframe(src="http://www.baidu.com",width="100%",height="500px",id="iframe1",onLoad="autoResize('iframe1')")
 
 
-  dive(data-role="header")
-    h1= title
-    p Welcome to #{title}
 
-  dive(data-role="content")
-    iframe(src="http://www.baidu.com",width="100%",height="100%",id="iframe1",onLoad="autoResize('iframe1')")
-
-
-
-  dive(data-role="navbar")
-    ul
-      li
-        a(href="#",class="ui-btn-active ui-state-persist") News
-      li
-        a(href="#",class="ui-btn-active ui-state-persist") Email
-      li
-        a(href="#",class="ui-btn-active ui-state-persist") Game
+    dive(data-role="navbar")
+      ul
+        li
+          a(href="#",class="ui-btn-active ui-state-persist") News
+        li
+          a(href="#",class="ui-btn-active ui-state-persist") Email
+        li
+          a(href="#",class="ui-btn-active ui-state-persist") Game
 
