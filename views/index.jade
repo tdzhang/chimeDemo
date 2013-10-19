@@ -1,9 +1,17 @@
 extends layout
 
 block content
-  script(language="JavaScript")
+
   
   dive(data-role="page",data-theme="b", id="home")
+    dive(data-role="navbar",id="navi")
+      ul
+        li
+          a(href="/?type=news",class="ui-btn-active ui-state-persist") News
+        li
+          a(href="/?type=email",class="ui-btn-active ui-state-persist") Email
+        li
+          a(href="/?type=game",class="ui-btn-active ui-state-persist") Game
 
     dive(data-role="header")
       h1= title
@@ -21,17 +29,10 @@ block content
       -linkPage="http://www.baptistebrunet.com/games/fruit_salad/"
       -}
       
+      center
+        iframe(id="iframe1",src= "#{linkPage}",width="80%",onload="this.height=iframe1.document.body.scrollHeight")
 
-      iframe(id="iframe1",src= "#{linkPage}",width="80%",onload="this.height=iframe1.document.body.scrollHeight")
 
 
 
-    dive(data-role="navbar")
-      ul
-        li
-          a(href="/?type=news",class="ui-btn-active ui-state-persist") News
-        li
-          a(href="/?type=email",class="ui-btn-active ui-state-persist") Email
-        li
-          a(href="/?type=game",class="ui-btn-active ui-state-persist") Game
 
