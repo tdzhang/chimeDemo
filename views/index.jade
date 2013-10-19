@@ -19,13 +19,16 @@ block content
     dive(data-role="content")
       -var linkPage="default"
       -if (link=="news"){
-      -linkPage="http://news.stanford.edu/"
+      -linkPage="http://news.stanford.edu/";
       -}
       -else if(link=="email"){
-      -linkPage="http://webmail.juno.com/"
+      -linkPage="http://webmail.juno.com/";
       -}
       -else if(link=="game"){
-      -linkPage="http://www.baptistebrunet.com/games/fruit_salad/"
+      -linkPage="http://www.baptistebrunet.com/games/fruit_salad/";
+      -}
+      -else{
+      -linkPage="/welcomePage";
       -}
       
       center
